@@ -192,6 +192,12 @@ if __name__ == "__main__":
     status_var = tk.StringVar()
     tk.Label(sidebar, textvariable=status_var, bg=BG_SIDEBAR, fg=TEXT_DARK).pack(pady=10)
 
+    # small icon under count
+    small_icon = tk.PhotoImage(file="bottom_icon.png")
+    icon_label = tk.Label(sidebar, image=small_icon, bg=BG_SIDEBAR)
+    icon_label.image = small_icon  
+    icon_label.pack(pady=5)
+
     # recipe list
     listbox = tk.Listbox(root, width=40, height=25, bg="#ffffff", fg=TEXT_DARK, font=("Helvetica",10))
     listbox.pack(side="left", fill="y", padx=(10,0), pady=10)
